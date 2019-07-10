@@ -1,4 +1,4 @@
-<?php
+<?php  
 
 /*
 |--------------------------------------------------------------------------
@@ -14,3 +14,21 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/products', 'ProductsController@index');
+    Route::get('/products/create', 'ProductsController@create');
+    Route::get('/products/{product}', 'ProductsController@show');
+    Route::get('/products/{product}/edit', 'ProductsController@edit');
+    Route::patch('/products/{product}', 'ProductsController@update');
+    Route::post('/products', 'ProductsController@store');
+    Route::delete('/products/{product}', 'ProductsController@destroy');
+
+    Route::get('/home', 'HomeController@index')->name('home');
+});
+
+
+
+Auth::routes();
+
+
