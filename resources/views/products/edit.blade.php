@@ -9,10 +9,10 @@
                     <input class="form-control" type="text" name="name" value="{{ $product->name }}">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="name" value="{{ $product->brand }}">
+                    <input class="form-control" type="text" name="brand" value="{{ $product->brand }}">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="name" value="{{ $product->price }}">
+                    <input class="form-control" type="text" name="price" value="{{ $product->price }}">
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="text" name="image" value="{{ $product->image }}">

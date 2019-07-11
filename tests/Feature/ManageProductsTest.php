@@ -19,10 +19,10 @@ class ManageProductsTest extends TestCase
     {
         $product = factory('App\Product')->create();
         
-        $this->get('/products')->assertRedirect('login');
+        // $this->get('/products')->assertRedirect('login');
         $this->get('/products/create')->assertRedirect('login');
         $this->get($product->path().'/edit')->assertRedirect('login');
-        $this->get($product->path())->assertRedirect('login');
+        // $this->get($product->path())->assertRedirect('login');
         $this->post('/products', $product->toArray())->assertRedirect('login');
     }
 
@@ -69,19 +69,7 @@ class ManageProductsTest extends TestCase
               ->assertsee($product->description);
     }
 
-    /** @test */
-
-    public function an_authenticated_user_cannot_view_the_products_of_others()
-    {
-        $this->signIn();
-
-        // $this->withoutExceptionHandling();
- 
-        $product = factory('App\Product')->create();
-
-        $this->get($product->path())->assertStatus(403);
-    }
-
+    
 
     /** @test */
     public function a_product_requires_a_name()
