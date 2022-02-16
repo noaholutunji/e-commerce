@@ -36,6 +36,7 @@
     <p class="mt-4"> <em>Added By {{ $product->owner->name }}</em></p>
   </div>
 </div>
-
+</div>
+</div>
 
 @include('partials.footer')
