@@ -32,7 +32,13 @@ class User extends Authenticatable
      * The attributes that should be cast to native types.
      *
      * @var array
+     *
      */
+
+     public function products()
+     {
+         return $this->hasMany(Product::class, 'owner_id');
+     }
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
