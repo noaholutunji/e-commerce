@@ -20,7 +20,7 @@
             <h4>{{ $product->name }}</h4>
             <p class="card-text">{{ $product->brand }}</p>
             <p class="card-text">{{ str_limit($product->description, 20) }}</p>
-            <p class="card-text">N{{ $product->price }}</p>
+            <p class="card-text">${{ $product->price }}</p>
    
           <a href="{{ $product->path() }}"class="btn btn-primary">More Info</a>
     
@@ -32,3 +32,5 @@
     </div>
     </div>
    
+
+    @include('partials.footer')

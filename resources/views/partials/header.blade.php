@@ -60,9 +60,13 @@
                     </ul>
       <li class="nav-item">
         
-        <a class="nav-link" href="/carts">Cart<i class="fas fa-shopping-cart text-white m-auto"></i></a>
+        <a class="nav-link" href="/cart">Cart<i class="fas fa-shopping-cart text-white m-auto"></i></a>
     </li>
         
     </ul>
     </div>
 </nav>
+
+       <main>
+            @yield('content')
+        </main>

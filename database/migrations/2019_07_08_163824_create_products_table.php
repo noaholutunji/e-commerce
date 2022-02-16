@@ -21,7 +21,6 @@ class CreateProductsTable extends Migration
             $table->string('price');
             $table->string('image');
             $table->text('description');
-            ;
             $table->timestamps();
 
             $table->foreign('owner_id')->references('id')->on('users')->onDelete('cascade');
